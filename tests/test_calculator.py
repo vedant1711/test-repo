@@ -26,8 +26,8 @@ class TestCalculator:
         assert self.calc.divide(7, 2) == 3.5
 
     def test_divide_by_zero(self):
-        """This test SHOULD pass but will FAIL because divide doesn't handle zero."""
-        with pytest.raises(ZeroDivisionError):
+        """Test that dividing by zero raises a ValueError."""
+        with pytest.raises(ValueError, match="Division by zero is not allowed"):
             self.calc.divide(10, 0)
 
     def test_modulo(self):

@@ -19,8 +19,11 @@ class Calculator:
     def divide(self, a, b):
         """Divide a by b.
 
-        BUG: Does not handle division by zero!
+        Raises:
+            ValueError: If b is zero.
         """
+        if b == 0:
+            raise ValueError("Division by zero is not allowed")
         return a / b
 
     def modulo(self, a, b):
