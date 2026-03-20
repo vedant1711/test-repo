@@ -16,6 +16,7 @@ def test_reverse_string():
 def test_reverse_words():
     assert reverse_words("hello world") == "world hello"
     assert reverse_words("one") == "one"
+    assert reverse_words("") == ""
 
 
 def test_capitalize_words():

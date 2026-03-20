@@ -11,6 +11,8 @@ def reverse_words(sentence):
 
     BUG: Crashes on empty string input!
     """
+    if not sentence:
+        return ""
     words = sentence.split(" ")
     return " ".join(words[::-1])
 
